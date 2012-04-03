@@ -6,9 +6,9 @@
 .login ul li { float:left; width:100%;}
 .login ul li input {
 	float:left;
-	width:360px;
-	height:45px;
-	padding:0 0 0 40px;
+	width:70%;
+	height:40%;
+	padding:10px 0 10px 40px;
 	margin:10px 0 0 0;
 	border-radius:5px;
 	-moz-border-radius:5px;
