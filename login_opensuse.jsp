@@ -1,3 +1,24 @@
+<%@ page language="java" 
+%><%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ page import="java.util.*" 
+%><%@ page import="com.novell.nidp.*"
+%><%@ page import="com.novell.nidp.servlets.*" 
+%><%@ page import="com.novell.nidp.resource.*" 
+%><%@ page import="com.novell.nidp.resource.jsp.*" 
+%><%@ page import="com.novell.nidp.ui.*" 
+%><%
+    ContentHandler handler = new ContentHandler(request,response);
+    String target = (String) request.getAttribute("target");
+
+    String serverIncludePath = "https://secure-www.novell.com";
+    if(request.getServerName().indexOf("stage") > 0) {
+   	     serverIncludePath = "https://secure-wwwstage.provo.novell.com";
+    }
+    if(request.getServerName().indexOf("test") > 0) {
+   	     serverIncludePath = "https://secure-wwwtest.provo.novell.com";
+    }
+
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
@@ -36,7 +57,6 @@
   <!-- End: Header -->
 
 
-
   <!-- Start: Main Content Area -->
   <div id="content" class="container_12  content-wrapper">
 
@@ -44,15 +64,27 @@
       <h1>Login here</h1>
 
       <ul>
-        <li><input name="" type="text" placeholder="username" class="username"></li>
+	<form name="IDPLogin" enctype="application/x-www-form-urlencoded" method="POST" action="<%= (String) request.getAttribute("url") %>" autocomplete="off">
+	<input type="hidden" name="option" value="credential">
+        <% if (target != null) { %>
+           <input type="hidden" name="target" value="<%=target%>">
+        <% } %>
+        <%
+           String err = (String) request.getAttribute(NIDPConstants.ATTR_LOGIN_ERROR);
+             //String err = null;
+           if (err != null) {
+        %>
+           <p class="error"><%=err%></p>
+        <%  } %>
+        <li><input name="Ecom_User_ID" type="text" placeholder="username" class="username" tabindex="1"></li>
         <li>
-          <input name="" type="password" value="" placeholder="password" class="password">
+          <input name="Ecom_Password" type="password" value="" placeholder="password" class="password" tabindex="2">
         </li>
       </ul>
       
       <a href=#>
         <aside class="loginBtn">
-          <input name="" type="button" >
+          <input name="submit" type="submit" tabindex="3" >
         </aside>
       </a>
 
@@ -62,8 +94,7 @@
           <a href="#">Forgot your password?</a>
         </aside>
       </section>
-
-      <section class="info">
+     <section class="info">
         <h1>Don't have an account yet ?</h1>
 
         <li>Fill some thing in here</li>
@@ -101,4 +132,4 @@
 
 
   </body>
-  </html>
+  </html>				
