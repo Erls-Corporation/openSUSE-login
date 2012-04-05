@@ -27,7 +27,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 
-  <link href="https://static.opensuse.org/themes/bento/css/login.css" rel="stylesheet" type="text/css">
+  <link href="https://static.opensuse.org/login.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href=" http://static.opensuse.org/themes/bento/css/style.fluid.css" type="text/css" media="screen" title="All" charset="utf-8" />
 
   <script src=" https://static.opensuse.org/themes/bento/js/jquery.js" type="text/javascript" charset="utf-8"></script>
