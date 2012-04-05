@@ -90,29 +90,25 @@
 
 
 
-        <aside class="link">
-          <a href="#">Forgot your password?</a>
-        </aside>
+      <aside class="link">
+        <a href="https://secure-www.novell.com/selfreg/jsp/forgotPassword.jsp?target=http://www.opensuse.org">Recover my password </a><br \>
+        <a href="https://secure-www.novell.com/selfreg/jsp/forgotUsername.jsp?target=http://www.opensuse.org">Look up my username</a>  <br \>
+        <a href="https://secure-www.novell.com/selfreg/jsp/forgotAll.jsp?target=http://www.opensuse.org">Retrive both</a>
+      </aside>
+      
       </section>
      <section class="info">
-        <h1>Don't have an account yet ?</h1>
-
-        <li>Fill some thing in here</li>
-        <li>Fill some thing in here</li>
-        <li>Fill some thing in here</li>
-        <li>Fill some thing in here</li>
-
+      <h1>Don't have an account yet ?</h1>
+      <p> Sign up for an account to log in to the openSUSE infrastructure.  </p>
         <p>
-
           <a href="#" >
             <aside class="signUpBtn">
               <input name="" type="button">
             </aside>
           </a>
         </p>
-
-  
-        </section>
+     
+    </section>
       </section>    
 
     <!-- End: Main Content Area -->
