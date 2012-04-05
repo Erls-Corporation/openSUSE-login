@@ -74,7 +74,7 @@
              //String err = null;
            if (err != null) {
         %>
-           <div class="error"><%=err%><div>
+        <div class="error"><%=err%></div>
         <%  } %>
         <li><input name="Ecom_User_ID" type="text" placeholder="username" class="username" tabindex="1"></li>
         <li>
